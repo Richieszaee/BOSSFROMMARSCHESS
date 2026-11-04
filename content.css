@@ -1,0 +1,55 @@
+svg.bfm-svg{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:60}
+
+.bfm-panel{position:fixed;top:80px;right:16px;z-index:2147483000;width:280px;background:#262421;color:#e8e6e3;border-radius:12px;box-shadow:0 12px 32px rgba(0,0,0,.5);font:14px/1.35 "Segoe UI",system-ui,sans-serif;overflow:hidden;user-select:none;border:1px solid #3a3835}
+.bfm-panel.bfm-hidden{display:none}
+.bfm-panel *{box-sizing:border-box}
+
+.bfm-head{display:flex;align-items:center;gap:6px;padding:9px 10px 9px 12px;background:#1d1c1a;cursor:move}
+.bfm-head b{font-size:13.5px}
+.bfm-logo{width:20px;height:20px;border-radius:6px;background:#5cb82e url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M6 18 16 8' stroke='white' stroke-width='2.6'/%3E%3Cpath d='M19 5l-8 2 6 6z' fill='white'/%3E%3C/svg%3E") center/80% no-repeat}
+.bfm-sp{flex:1}
+.bfm-tg{position:relative;width:36px;height:20px;border-radius:10px;border:0;background:#4b4847;cursor:pointer;padding:0;transition:background .2s;margin-right:2px}
+.bfm-tg::after{content:"";position:absolute;top:3px;left:3px;width:14px;height:14px;border-radius:50%;background:#fff;transition:left .2s}
+.bfm-tg.on{background:#5cb82e}.bfm-tg.on::after{left:19px}
+.bfm-ib{border:0;background:transparent;color:#9e9b98;width:24px;height:24px;border-radius:6px;cursor:pointer;font-size:15px;line-height:1;padding:0}
+.bfm-ib:hover{background:#3a3835;color:#fff}
+.bfm-minimised .bfm-turn,.bfm-minimised .bfm-list,.bfm-minimised .bfm-foot,.bfm-minimised .bfm-set{display:none!important}
+
+.bfm-body{padding:12px 12px 10px}
+.bfm-evalrow{display:flex;align-items:center;gap:10px}
+.bfm-score{flex:none;min-width:62px;text-align:center;font-size:20px;font-weight:800;padding:3px 8px;border-radius:7px;background:#fff;color:#262421}
+.bfm-score.neg{background:#45423e;color:#fff}
+.bfm-bar{flex:1;height:12px;border-radius:6px;background:#45423e;overflow:hidden}
+.bfm-barw{height:100%;width:50%;background:#fff;border-radius:6px 0 0 6px;transition:width .4s ease}
+.bfm-verdict{margin-top:8px;font-size:14.5px;font-weight:700;color:#fff}
+.bfm-turn{margin-top:10px;font-size:12px;color:#9e9b98;display:flex;align-items:center;gap:6px}
+.bfm-pawn{width:12px;height:12px;border-radius:50%;border:2px solid #9e9b98}
+.bfm-pawn.w{background:#fff}.bfm-pawn.b{background:#111}
+
+.bfm-list{margin-top:6px;display:flex;flex-direction:column;gap:5px}
+.bfm-mv{display:flex;align-items:center;gap:9px;padding:8px 10px;border-radius:9px;background:#302e2b;cursor:default;transition:background .15s}
+.bfm-mv:hover{background:#3b3935}
+.bfm-mv.top{background:#2f3d27;box-shadow:inset 3px 0 0 #5cb82e}
+.bfm-mv.top:hover{background:#38492e}
+.bfm-num{flex:none;width:20px;height:20px;border-radius:50%;background:#3f95e6;color:#fff;font-size:11px;font-weight:800;display:flex;align-items:center;justify-content:center}
+.bfm-mv.top .bfm-num{background:#5cb82e}
+.bfm-mv b{font-size:17px;color:#fff;min-width:52px;letter-spacing:.2px}
+.bfm-q{flex:1;font-size:12px;font-weight:700}
+.q-best{color:#7fd34e}.q-exc{color:#9bd27a}.q-good{color:#6fb6f2}.q-inac{color:#f2c94c}.q-mis{color:#ff8a65}
+.bfm-e{flex:none;font-size:12px;font-weight:700;padding:2px 7px;border-radius:5px;background:#fff;color:#262421}
+.bfm-e.neg{background:#45423e;color:#fff}
+.bfm-mv.empty b{color:#5c5a57}.bfm-mv.empty .bfm-num{background:#45423e}
+
+.bfm-foot{margin-top:9px;font-size:11px;color:#7d7a77;text-align:center}
+.bfm-set{display:none;margin-top:10px;padding-top:10px;border-top:1px solid #3a3835;flex-direction:column;gap:8px}
+.bfm-showset .bfm-set{display:flex}
+.bfm-set label{display:flex;justify-content:space-between;align-items:center;font-size:12.5px;color:#cfccc8}
+.bfm-set select{background:#3a3835;color:#eee;border:1px solid #4b4847;border-radius:6px;font-size:12.5px;padding:3px 4px}
+
+.bfm-evalbar{position:fixed;z-index:2147482999;background:#403d39;border-radius:4px;overflow:hidden;pointer-events:none;display:none;box-shadow:0 0 0 1px rgba(0,0,0,.25)}
+.bfm-eb-w{position:absolute;left:0;right:0;bottom:0;background:#fff;transition:height .45s ease}
+.bfm-evalbar.flip .bfm-eb-w{bottom:auto;top:0}
+.bfm-eb-mid{position:absolute;left:0;right:0;top:50%;height:2px;margin-top:-1px;background:rgba(230,80,60,.55)}
+.bfm-eb-l{position:absolute;left:0;right:0;text-align:center;font:800 11px "Segoe UI",system-ui,sans-serif;padding:4px 0}
+.bfm-eb-l.bot{bottom:0}.bfm-eb-l.top{top:0}
+.bfm-eb-l.onw{color:#403d39}.bfm-eb-l.onb{color:#fff}
